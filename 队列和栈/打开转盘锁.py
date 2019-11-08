@@ -20,8 +20,8 @@ class Solution(object):
         seen = {'0000'}
         while queue:
             node, depth = queue.popleft()
-            if node == target: return depth
             if node in dead: continue
+            if node == target: return depth
             for nei in neighbors(node):
                 if nei not in seen:
                     seen.add(nei)
@@ -30,6 +30,6 @@ class Solution(object):
 
 
 deadends = ["0201", "0101", "0102", "1212", "2002"]
-target = "0202"
+target = "0101"
 a = Solution()
 print(a.openLock(deadends, target))
