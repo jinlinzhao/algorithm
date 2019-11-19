@@ -34,6 +34,7 @@ class MyCircularQueue(object):
     def enQueue(self, value):
         """
         Insert an element into the circular queue. Return true if the operation is successful.
+        向循环队列插入一个元素。如果成功插入则返回真。
         :type value: int
         :rtype: bool
         """
@@ -46,6 +47,7 @@ class MyCircularQueue(object):
     def deQueue(self):
         """
         Delete an element from the circular queue. Return true if the operation is successful.
+        从循环队列中删除一个元素。如果成功删除则返回真。
         :rtype: bool
         """
         if not self.isEmpty():
@@ -56,6 +58,7 @@ class MyCircularQueue(object):
     def Front(self):
         """
         Get the front item from the queue.
+        从队首获取元素。如果队列为空，返回 -1
         :rtype: int
         """
         if not self.isEmpty():
@@ -65,6 +68,7 @@ class MyCircularQueue(object):
     def Rear(self):
         """
         Get the last item from the queue.
+        获取队尾元素。如果队列为空，返回 -1
         :rtype: int
         """
         if not self.isEmpty():
@@ -74,6 +78,7 @@ class MyCircularQueue(object):
     def isEmpty(self):
         """
         Checks whether the circular queue is empty or not.
+        检查循环队列是否为空
         :rtype: bool
         """
         return self.rear == self.front
@@ -81,6 +86,7 @@ class MyCircularQueue(object):
     def isFull(self):
         """
         Checks whether the circular queue is full or not.
+        检查循环队列是否已满
         :rtype: bool
         """
         return (self.rear + 1) % self.size == self.front
